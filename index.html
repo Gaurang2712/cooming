@@ -95,12 +95,9 @@
   </header>  
 
   <!-- Countdown Script -->
-  <script>
-  // Get today's date
-  var today = new Date();
-
-  // Add 30 days to today's date
-  var endDate = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000)).getTime();
+ <script>
+  // Set launch/end date (fixed)
+  var endDate = new Date("Sep 30, 2025 23:59:59").getTime();
 
   var x = setInterval(function() {
     var timeNow = new Date().getTime();
@@ -121,9 +118,16 @@
       document.getElementById("cdH").innerHTML = hours;
       document.getElementById("cdM").innerHTML = minutes;
       document.getElementById("cdS").innerHTML = seconds;
+    } else {
+      clearInterval(x);
+      document.getElementById("cdD").innerHTML = "00";
+      document.getElementById("cdH").innerHTML = "00";
+      document.getElementById("cdM").innerHTML = "00";
+      document.getElementById("cdS").innerHTML = "00";
     }
   }, 1000);
 </script>
+
 
 
 </body>
