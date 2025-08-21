@@ -4,131 +4,364 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
   <title>Paws & Purrs | Coming Soon</title>
-
+  <meta name="description" content="Paws & Purrs India - Your trusted companion for premium pet care services, products, and expert advice. Professional pet grooming, veterinary care, and premium pet supplies. Coming Soon to pawspurrs.in!">
+  <meta name="keywords" content="pet care India, dog grooming, cat care, veterinary services, pet products India, pet supplies, animal care, pet health, pet wellness, pet accessories, pawspurrs India">
+  <meta name="author" content="Paws & Purrs India">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Paws & Purrs India - Premium Pet Care Services Coming Soon">
+  <meta property="og:description" content="Professional pet care services and premium products for your beloved pets in India. Stay tuned for the launch of pawspurrs.in!">
+  <meta property="og:image" content="https://pawspurrs.in/assets/og-image.jpg">
+  <meta property="og:url" content="https://pawspurrs.in">
+  <meta property="og:site_name" content="Paws & Purrs India">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paws & Purrs India - Premium Pet Care Coming Soon">
+  <meta name="twitter:description" content="Professional pet care services and premium products for your beloved pets in India.">
+  <meta name="twitter:image" content="https://pawspurrs.in/assets/twitter-image.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo.png">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://pawspurrs.in">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            'Montserrat': ['Montserrat'],
-            'Noto-Sans': ['"Noto Sans"'],
-            'Comforter-Brush': ['"Comforter Brush"']
+            'poppins': ['Poppins', 'sans-serif'],
+            'playfair': ['Playfair Display', 'serif'],
+            'dancing': ['Dancing Script', 'cursive']
           },
           colors: {
-            brand: {
-              DEFAULT: '#f59e0b', // amber
-              dark: '#0f172a',   // slate dark
+            primary: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              200: '#fed7aa',
+              300: '#fdba74',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            },
+            secondary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            }
+          },
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+            'pulse-slow': 'pulse 3s infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
             }
           }
         }
       }
     }
   </script>
+  
+  <!-- Custom Styles -->
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .paw-pattern::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.1) 2px, transparent 2px),
+        radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.1) 2px, transparent 2px);
+      background-size: 100px 100px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  </style>
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Paws & Purrs India",
+    "description": "Premium pet care services and products for dogs, cats, and other beloved pets in India.",
+    "url": "https://pawspurrs.in",
+    "logo": "https://pawspurrs.in/assets/logo.png",
+    "image": "https://pawspurrs.in/assets/og-image.jpg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "serviceArea": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Pet Care Services India",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Pet Grooming Services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Veterinary Care"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Premium Pet Products"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 </head>
 
-<body class="font-Noto-Sans bg-brand-dark text-white">
+<body class="font-poppins bg-gray-900 text-white overflow-x-hidden">
+  <!-- Animated Background -->
+  <div class="fixed inset-0 z-0 paw-pattern">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-orange-900/20 via-transparent to-purple-900/20"></div>
+  </div>
 
-  <!-- Header -->
-  <header class="w-full bg-cover bg-center" style="background-image: url('assets/image.png');">
+  <!-- Floating Elements -->
+  <div class="fixed inset-0 z-10 pointer-events-none">
+    <i class="fas fa-paw absolute top-20 left-10 text-primary-400/30 text-2xl animate-float" style="animation-delay: 0s;"></i>
+    <i class="fas fa-bone absolute top-40 right-20 text-primary-400/30 text-xl animate-float" style="animation-delay: 1s;"></i>
+    <i class="fas fa-fish absolute bottom-40 left-20 text-secondary-400/30 text-lg animate-float" style="animation-delay: 2s;"></i>
+    <i class="fas fa-heart absolute bottom-20 right-10 text-pink-400/30 text-xl animate-float" style="animation-delay: 0.5s;"></i>
+  </div>
 
-    <div class="w-full min-h-screen bg-gradient-to-b from-black/80 to-black/90 p-10 flex">
-      <div class="w-full text-center my-auto">
-
-        <!-- Logo -->
-        <h1 class="font-Comforter-Brush text-6xl text-brand mb-6 flex justify-center items-center gap-3">
-          <i class="fa-solid fa-paw"></i> Paws & Purrs
+  <!-- Main Content -->
+  <main class="relative z-20 min-h-screen flex items-center justify-center p-4">
+    <div class="text-center max-w-4xl mx-auto">
+      
+      <!-- Logo Section -->
+      <div class="mb-8" data-aos="fade-down">
+        <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary-500/20 backdrop-blur-sm border border-primary-400/30 mb-4">
+          <i class="fas fa-paw text-primary-400 text-3xl animate-pulse"></i>
+        </div>
+        <h1 class="font-dancing text-6xl md:text-7xl lg:text-8xl text-primary-400 mb-2 animate-pulse-slow">
+          Paws & Purrs
         </h1>
-
-        <!-- Heading -->
-        <h6 class="font-Montserrat font-bold uppercase text-4xl md:text-5xl lg:text-6xl mb-14">
-          Coming <span class="text-brand">Soon</span>
-        </h6>
-
-        <!-- Countdown -->
-        <div class="flex justify-center mb-10">
-          <ul class="flex gap-6 text-gray-200">        
-            <li>
-              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdD">00</div>
-              <p class="text-center text-sm mt-2">Days</p>
-            </li>
-            <li>
-              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdH">00</div>
-              <p class="text-center text-sm mt-2">Hours</p>
-            </li>
-            <li>
-              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdM">00</div>
-              <p class="text-center text-sm mt-2">Minutes</p>
-            </li>
-            <li>
-              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdS">00</div>
-              <p class="text-center text-sm mt-2">Seconds</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Content -->
-        <p class="max-w-xl mx-auto text-gray-300 text-lg mb-10">
-          We’re building a space where <span class="text-brand">tails wag</span> and <span class="text-brand">purrs comfort</span>.  
-          Stay tuned for pet care tips, products & much more! 🐶🐱
-        </p>
-
-        <!-- Social Media -->
-        <div class="flex justify-center gap-8 text-gray-400">
-          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-youtube"></i></a>
-        </div>
-
+        <p class="text-primary-300/80 text-lg tracking-wider">Premium Pet Care Services</p>
+        <p class="text-secondary-300/60 text-sm mt-2">pawspurrs.in</p>
       </div>
+
+      <!-- Coming Soon Section -->
+      <div class="mb-12" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="font-playfair font-bold text-4xl md:text-6xl lg:text-7xl mb-4">
+          Coming <span class="text-primary-400 animate-pulse">Soon</span>
+        </h2>
+        <div class="w-32 h-1 bg-gradient-to-r from-primary-400 to-secondary-400 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="mb-12" data-aos="zoom-in" data-aos-delay="400">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-md md:max-w-2xl mx-auto">
+          <div class="glass-effect rounded-2xl p-4 md:p-6 transform hover:scale-105 transition-all duration-300">
+            <div class="text-2xl md:text-4xl font-bold text-primary-400 mb-2" id="days">00</div>
+            <div class="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Days</div>
+          </div>
+          <div class="glass-effect rounded-2xl p-4 md:p-6 transform hover:scale-105 transition-all duration-300">
+            <div class="text-2xl md:text-4xl font-bold text-secondary-400 mb-2" id="hours">00</div>
+            <div class="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Hours</div>
+          </div>
+          <div class="glass-effect rounded-2xl p-4 md:p-6 transform hover:scale-105 transition-all duration-300">
+            <div class="text-2xl md:text-4xl font-bold text-pink-400 mb-2" id="minutes">00</div>
+            <div class="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Minutes</div>
+          </div>
+          <div class="glass-effect rounded-2xl p-4 md:p-6 transform hover:scale-105 transition-all duration-300">
+            <div class="text-2xl md:text-4xl font-bold text-green-400 mb-2" id="seconds">00</div>
+            <div class="text-xs md:text-sm text-gray-300 uppercase tracking-wider">Seconds</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="mb-12" data-aos="fade-up" data-aos-delay="600">
+        <div class="glass-effect rounded-3xl p-8 max-w-2xl mx-auto">
+          <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-6">
+            We're crafting something extraordinary for your beloved companions in India. From premium grooming services to expert veterinary care, we're building a sanctuary where 
+            <span class="text-primary-400 font-semibold">tails wag with joy</span> and 
+            <span class="text-secondary-400 font-semibold">purrs bring comfort</span>.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <span class="bg-primary-500/20 text-primary-300 px-4 py-2 rounded-full">🐕 Dog Care</span>
+            <span class="bg-secondary-500/20 text-secondary-300 px-4 py-2 rounded-full">🐱 Cat Care</span>
+            <span class="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full">🏥 Veterinary</span>
+            <span class="bg-green-500/20 text-green-300 px-4 py-2 rounded-full">🛁 Grooming</span>
+            <span class="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full">🇮🇳 Made in India</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="mb-12" data-aos="fade-up" data-aos-delay="800">
+        <div class="glass-effect rounded-2xl p-6 max-w-md mx-auto">
+          <h3 class="text-xl font-semibold mb-4 text-primary-300">Get Notified When We Launch!</h3>
+          <form class="flex flex-col sm:flex-row gap-3" id="newsletter-form">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-400"
+              required
+            >
+            <button 
+              type="submit"
+              class="px-6 py-3 bg-primary-500 hover:bg-primary-600 rounded-lg font-semibold transition-colors duration-300 transform hover:scale-105"
+            >
+              Notify Me
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="flex justify-center gap-6" data-aos="fade-up" data-aos-delay="1000">
+        <a href="https://facebook.com/pawspurrsindia" class="w-12 h-12 rounded-full glass-effect flex items-center justify-center text-gray-300 hover:text-blue-400 hover:scale-110 transition-all duration-300" aria-label="Facebook">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="https://twitter.com/pawspurrsindia" class="w-12 h-12 rounded-full glass-effect flex items-center justify-center text-gray-300 hover:text-blue-300 hover:scale-110 transition-all duration-300" aria-label="Twitter">
+          <i class="fab fa-twitter text-xl"></i>
+        </a>
+        <a href="https://instagram.com/pawspurrsindia" class="w-12 h-12 rounded-full glass-effect flex items-center justify-center text-gray-300 hover:text-pink-400 hover:scale-110 transition-all duration-300" aria-label="Instagram">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="https://youtube.com/@pawspurrsindia" class="w-12 h-12 rounded-full glass-effect flex items-center justify-center text-gray-300 hover:text-red-400 hover:scale-110 transition-all duration-300" aria-label="YouTube">
+          <i class="fab fa-youtube text-xl"></i>
+        </a>
+        <a href="https://wa.me/919876543210" class="w-12 h-12 rounded-full glass-effect flex items-center justify-center text-gray-300 hover:text-green-400 hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+      </div>
+
     </div>
-  </header>  
+  </main>
 
-  <!-- Countdown Script -->
- <script>
-  // Set launch/end date (fixed)
-  var endDate = new Date("Sep 30, 2025 23:59:59").getTime();
+  <!-- Footer -->
+  <footer class="relative z-20 text-center p-6 text-gray-400 text-sm">
+    <p>&copy; 2025 Paws & Purrs India (pawspurrs.in). All rights reserved. | Made with ❤️ for pet lovers in India</p>
+  </footer>
 
-  var x = setInterval(function() {
-    var timeNow = new Date().getTime();
-    var timeLeft = endDate - timeNow;
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
 
-    var days    = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    var hours   = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    // Countdown Timer - Set your launch date
+    const countdownDate = new Date("Sep 21, 2025 23:59:59").getTime();
+    
+    const countdown = setInterval(function() {
+      const now = new Date().getTime();
+      const timeLeft = countdownDate - now;
+      
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      
+      document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+      document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+      
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        document.getElementById("days").innerHTML = "00";
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+      }
+    }, 1000);
 
-    if(days < 10) days = "0" + days;
-    if(hours < 10) hours = "0" + hours;
-    if(minutes < 10) minutes = "0" + minutes;
-    if(seconds < 10) seconds = "0" + seconds;
+    // Newsletter Form Handler
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      
+      // Simple email validation
+      if (email && email.includes('@')) {
+        // Here you would normally send the email to your backend
+        // For now, we'll just show a success message
+        alert('Thank you! We\'ll notify you when pawspurrs.in launches.');
+        this.querySelector('input[type="email"]').value = '';
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
 
-    if (timeLeft > 0) {
-      document.getElementById("cdD").innerHTML = days;
-      document.getElementById("cdH").innerHTML = hours;
-      document.getElementById("cdM").innerHTML = minutes;
-      document.getElementById("cdS").innerHTML = seconds;
-    } else {
-      clearInterval(x);
-      document.getElementById("cdD").innerHTML = "00";
-      document.getElementById("cdH").innerHTML = "00";
-      document.getElementById("cdM").innerHTML = "00";
-      document.getElementById("cdS").innerHTML = "00";
-    }
-  }, 1000);
-</script>
+    // Google Analytics (replace GA_MEASUREMENT_ID with your actual ID)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID'); // Replace with your Google Analytics ID
+  </script>
 
-
-
+  <!-- Google Analytics (replace GA_MEASUREMENT_ID with your tracking ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 </body>
 </html>
