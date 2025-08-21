@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paws & Purrs | Coming Soon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'Montserrat': ['Montserrat'],
+            'Noto-Sans': ['"Noto Sans"'],
+            'Comforter-Brush': ['"Comforter Brush"']
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#f59e0b', // amber
+              dark: '#0f172a',   // slate dark
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-Noto-Sans bg-brand-dark text-white">
+
+  <!-- Header -->
+  <header class="w-full bg-cover bg-center" style="background-image: url('assets/image.png');">
+
+    <div class="w-full min-h-screen bg-gradient-to-b from-black/80 to-black/90 p-10 flex">
+      <div class="w-full text-center my-auto">
+
+        <!-- Logo -->
+        <h1 class="font-Comforter-Brush text-6xl text-brand mb-6 flex justify-center items-center gap-3">
+          <i class="fa-solid fa-paw"></i> Paws & Purrs
+        </h1>
+
+        <!-- Heading -->
+        <h6 class="font-Montserrat font-bold uppercase text-4xl md:text-5xl lg:text-6xl mb-14">
+          Coming <span class="text-brand">Soon</span>
+        </h6>
+
+        <!-- Countdown -->
+        <div class="flex justify-center mb-10">
+          <ul class="flex gap-6 text-gray-200">        
+            <li>
+              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdD">00</div>
+              <p class="text-center text-sm mt-2">Days</p>
+            </li>
+            <li>
+              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdH">00</div>
+              <p class="text-center text-sm mt-2">Hours</p>
+            </li>
+            <li>
+              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdM">00</div>
+              <p class="text-center text-sm mt-2">Minutes</p>
+            </li>
+            <li>
+              <div class="font-bold text-white rounded-full border-dotted border-gray-600 border-4 flex items-center justify-center text-2xl lg:text-4xl h-20 w-20" id="cdS">00</div>
+              <p class="text-center text-sm mt-2">Seconds</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Content -->
+        <p class="max-w-xl mx-auto text-gray-300 text-lg mb-10">
+          We’re building a space where <span class="text-brand">tails wag</span> and <span class="text-brand">purrs comfort</span>.  
+          Stay tuned for pet care tips, products & much more! 🐶🐱
+        </p>
+
+        <!-- Social Media -->
+        <div class="flex justify-center gap-8 text-gray-400">
+          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-brand text-2xl"><i class="fab fa-youtube"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </header>  
+
+  <!-- Countdown Script -->
+  <script>
+  // Get today's date
+  var today = new Date();
+
+  // Add 30 days to today's date
+  var endDate = new Date(today.getTime() + (30 * 24 * 60 * 60 * 1000)).getTime();
+
+  var x = setInterval(function() {
+    var timeNow = new Date().getTime();
+    var timeLeft = endDate - timeNow;
+
+    var days    = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    var hours   = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    if(days < 10) days = "0" + days;
+    if(hours < 10) hours = "0" + hours;
+    if(minutes < 10) minutes = "0" + minutes;
+    if(seconds < 10) seconds = "0" + seconds;
+
+    if (timeLeft > 0) {
+      document.getElementById("cdD").innerHTML = days;
+      document.getElementById("cdH").innerHTML = hours;
+      document.getElementById("cdM").innerHTML = minutes;
+      document.getElementById("cdS").innerHTML = seconds;
+    }
+  }, 1000);
+</script>
+
+
+</body>
+</html>
